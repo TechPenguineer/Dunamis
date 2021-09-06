@@ -33,4 +33,10 @@
 
 # General Info
 
+Dunamis meaning Power in greek is a multi-purpose interpreted programming language. Interpreted meaning that you do not need a compiler; you run it through the command line.
+
 #  Whats New
+- Parser Updated
+- Vistor Function and variable deffinitions update
+- - `function` -> `fx`
+- - `var` -> `def`
