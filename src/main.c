@@ -35,14 +35,33 @@ int main(int argc, char* argv[])
     }
     else {
         char input[MAX_LIMIT];
+        int index = 1;
+ 
+        
         while(1){
-            printf("Welcome to the Dunamis language v. 0.0.1!\nCreated by TechPenguineer\n>>> ");
+            if (index==1)
+            {   
+                printf("\e[1;31m /$$$$$$$                                              /$$          \n");
+                printf("| $$__  $$                                            |__/          \n");
+                printf("| $$  \\ $$ /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$/$$$$  /$$  /$$$$$$$\n");
+                printf("| $$  | $$| $$  | $$| $$__  $$ |____  $$| $$_  $$_  $$| $$ /$$_____/\n");
+                printf("| $$  | $$| $$  | $$| $$  \\ $$  /$$$$$$$| $$ \\ $$ \\ $$| $$|  $$$$$$ \n");
+                printf("| $$  | $$| $$  | $$| $$  | $$ /$$__  $$| $$ | $$ | $$| $$ \\____  $$\n");
+                printf("| $$$$$$$/|  $$$$$$/| $$  | $$|  $$$$$$$| $$ | $$ | $$| $$ /$$$$$$$/\n");
+                printf("|_______/  \\______/ |__/  |__/ \\_______/|__/ |__/ |__/|__/|_______/ \n");
+                printf("\e[1;31m\n===================================================================\n");
+                printf("\n\e[1;36m\t\tVersion 0.0.1     -     Alpha Version 1\n\e[0m");
+                
+                index=0;
+            }
+            printf("\n\e[0;35m>>>\e[0m  ");
             fgets(input,MAX_LIMIT, stdin);
             lexer_T* lexer = init_lexer(input);
             parser_T* parser = init_parser(lexer);
             AST_T* root = parser_parse(parser, parser->scope);
             visitor_T* visitor = init_visitor();
             visitor_visit(visitor, root);
+        
         }
     }
     return 0;

@@ -1,3 +1,7 @@
-def name = "HELLO MY NAME IS BOB";
+fx sayname(wordone,wordtwo)
+{
+    print("Print");
+    println("Merged: ", wordone, " & ", wordtwo);
+};
 
-println  (name);
+sayname("Gary", "Rudd");

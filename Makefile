@@ -1,4 +1,4 @@
-exec = hello.out
+exec = duna.out
 sources = $(wildcard src/*.c)
 objects = $(sources:.c=.o)
 flags = -g
@@ -12,7 +12,7 @@ $(exec): $(objects)
 
 install:
 	make
-	sudo cp ./hello.out /usr/local/bin/duna
+	sudo cp ./duna.out /usr/local/bin/duna
 
 clean:
 	-rm *.out
