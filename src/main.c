@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
                 
                 index=0;
             }
-            printf("\n\e[0;35m>>>\e[0m  ");
+            printf("\n\e[0;35m>>>\e[0m   ");
             fgets(input,MAX_LIMIT, stdin);
             lexer_T* lexer = init_lexer(input);
             parser_T* parser = init_parser(lexer);
