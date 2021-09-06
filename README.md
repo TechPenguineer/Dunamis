@@ -18,9 +18,18 @@
         
  #### Copyright (c) 2021 Dunamis Technology. All Rights Reserved
        
+# Contents
+
+- ![Builds](#Builds)
+- ![General Info](#General-Info)
+- - ![Whats New](#Whats-New)
 # Builds
         
 - Build Stats: ![Build Status](https://img.shields.io/circleci/project/github/TechPenguineer/Dunamis/main)
 - stable release version: ![version](https://img.shields.io/badge/version-0.0.1-blue)
 ### There are no stable releases yet
 
+
+# General Info
+
+#  Whats New
