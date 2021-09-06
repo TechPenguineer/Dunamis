@@ -1,4 +1,4 @@
-var name = "john doe";
-var othername = "sarah";
+def name = "john doe";
+def othername = "sarah";
 print(name, othername);
 

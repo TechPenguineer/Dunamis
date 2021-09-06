@@ -1,3 +1,3 @@
-var name = "john doe";
+def name = "HELLO MY NAME IS BOB";
 
-print(name);
+println(name);

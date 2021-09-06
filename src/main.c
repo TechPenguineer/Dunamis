@@ -8,7 +8,7 @@
 #define MAX_LIMIT 20
 void print_help()
 {
-    printf("Usage:\n\tduna [file_name].das<filename>\n");
+    printf("Usage:\n\tduna [file_name].das\n");
     exit(1);
 }
 
@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
     else {
         char input[MAX_LIMIT];
         while(1){
-            printf("Welcome to the hello language v. 0.0.1!\nCreated by sebbekarlsson\n>>> ");
+            printf("Welcome to the Dunamis language v. 0.0.1!\nCreated by TechPenguineer\n>>> ");
             fgets(input,MAX_LIMIT, stdin);
             lexer_T* lexer = init_lexer(input);
             parser_T* parser = init_parser(lexer);
