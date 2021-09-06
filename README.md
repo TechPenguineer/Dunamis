@@ -1,4 +1,4 @@
-# This is Dunamis version 0.0.1 alpha 1
+<h1 align="center"> This is Dunamis version 0.0.1 alpha 1 </h1>
 
 <p align="center">
     <a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
