@@ -1,5 +1,7 @@
 <h1 align="center" style="font-weight:lighter;"> This is Dunamis version 0.0.1 alpha 1 </h1>
 
+#### Copyright (c) 2021 Dunamis Technology. All Rights Reserved
+
 <p align="center">
     <a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/contributors/Techpenguineer/Dunamis" /></a>
