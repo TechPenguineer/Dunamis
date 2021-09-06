@@ -15,4 +15,11 @@
     <a href="https://lgtm.com/projects/g/badges/shields/alerts/">
         <img src="https://img.shields.io/lgtm/alerts/g/Techpenguineer/Dunamis"
             alt="Total alerts"/></a>
-   
+        
+        
+# Builds
+        
+- Build Stats: ![Build Status](https://img.shields.io/circleci/project/github/TechPenguineer/Dunamis/main)
+- stable release version: ![version](https://img.shields.io/badge/version-0.0.1-blue)
+### There are no stable releases yet
+
