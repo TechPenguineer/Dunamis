@@ -46,10 +46,10 @@ Dunamis meaning Power in greek is a multi-purpose interpreted programming langua
 
 # Command Line
 
-### What its used for
+## What its used for
 The usage is so you can run or test your code
 
-### Usage
+## Usage
 #### Running
 `duna <filename>.das`
 #### Sandbox
