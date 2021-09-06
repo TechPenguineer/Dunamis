@@ -23,6 +23,9 @@
 - [Builds](#builds)
 - [General Info](#general-info)
 - - [Whats New](#whats-new)
+- [Commands]( #command-line)
+- - [What it's used for](#what-its-used-for)
+- - [Usage](#usage)
 
 # Builds
         
@@ -33,10 +36,23 @@
 
 # General Info
 
-Dunamis meaning Power in greek is a multi-purpose interpreted programming language. Interpreted meaning that you do not need a compiler; you run it through the command line.
+Dunamis meaning Power in greek is a multi-purpose interpreted programming language. Indterpreted meaning that you do not need a compiler; you run it through the command line.
 
 #  Whats New
 - Parser Updated
 - Vistor Function and variable deffinitions update
 - - `function` -> `fx`
 - - `var` -> `def`
+
+# Command Line
+
+### What its used for
+The usage is so you can run or test your code
+
+### Usage
+#### Running
+`duna <filename>.das`
+#### Sandbox
+`duna`
+#### Help
+`duna help`
