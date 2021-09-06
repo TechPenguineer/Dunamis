@@ -1,15 +1,16 @@
-function dosomething(x, y)
+fx dosomething(x, y)
 {
     print(x);
     print(y);
+    println("");
 };
 
-dosomething("hello", "world");
+dosomething("hello ", "world");
 
 
-function sayyourname(name)
+fx sayyourname(name)
 {
-    print(name);
+    println(name);
 };
 
 sayyourname("john doe");
