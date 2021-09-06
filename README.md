@@ -20,9 +20,10 @@
        
 # Contents
 
-- ![Builds](#Builds)
-- ![General Info](#General-Info)
-- - ![Whats New](#Whats-New)
+- [Builds](#builds)
+- [General Info](#general-info)
+- - [Whats New](#whats-new)
+
 # Builds
         
 - Build Stats: ![Build Status](https://img.shields.io/circleci/project/github/TechPenguineer/Dunamis/main)
