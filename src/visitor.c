@@ -28,8 +28,8 @@ static AST_T* builtin_function_println(visitor_T* visitor, AST_T** args, int arg
 
         switch (visited_ast->type)
         {
-            case AST_STRING: printf("%s", visited_ast->string_value); break;
-            default: printf("%p", visited_ast); break;
+            case AST_STRING: printf("%s\n", visited_ast->string_value); break;
+            default: printf("%p\n", visited_ast); break;
         }
     }
 

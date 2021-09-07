@@ -1,4 +1,2 @@
-def name = "john doe";
-def othername = "sarah";
-print(name, othername);
-
+def x = "E";
+println(x);
