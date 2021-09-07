@@ -54,6 +54,7 @@ token_T* lexer_get_next_token(lexer_T* lexer)
             case '{': return lexer_advance_with_token(lexer, init_token(TOKEN_LBRACE, lexer_get_current_char_as_string(lexer))); break;
             case '}': return lexer_advance_with_token(lexer, init_token(TOKEN_RBRACE, lexer_get_current_char_as_string(lexer))); break;
             case ',': return lexer_advance_with_token(lexer, init_token(TOKEN_COMMA, lexer_get_current_char_as_string(lexer))); break;
+            case '@': return lexer_advance_with_token(lexer, init_token(TOKEN_NOTE, lexer_get_current_char_as_string(lexer))); break;
         }
     }
 
@@ -75,7 +76,7 @@ token_T* lexer_collect_string(lexer_T* lexer)
 
         lexer_advance(lexer);
     }
-
+    
     lexer_advance(lexer);
 
     return init_token(TOKEN_STRING, value);

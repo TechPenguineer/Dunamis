@@ -13,7 +13,8 @@ typedef struct TOKEN_STRUCT
         TOKEN_RBRACE,
         TOKEN_LBRACE,
         TOKEN_COMMA,
-        TOKEN_EOF
+        TOKEN_EOF,
+        TOKEN_NOTE
     } type;
 
     char* value;
