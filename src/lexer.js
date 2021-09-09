@@ -38,15 +38,18 @@ class Lexer {
     {
         while(this.currentChar != null)
         {
-            if(constants.numbers.includes(this.currentChar)){this.tokens.add(this.makeNumber())}
+            if(constants.numbers.includes(this.currentChar)){this.tokens.add(this.makeNumber())
             if(this.currentChar=="+"){this.tokens.add(new Token(TokenTypes.PLUS));this.advance()}
             else if(this.currentChar=="-"){this.tokens.add(new Token(TokenTypes.SUBTRACT));this.advance()}
             else if(this.currentChar=="*"){this.tokens.add(new Token(TokenTypes.MULTIPLY));this.advance()}
             else if(this.currentChar=="/"){this.tokens.add(new Token(TokenTypes.DIVIDE));this.advance()}
             else if(this.currentChar=="^"){this.tokens.add(new Token(TokenTypes.EXPONENT)); this.advance()}
             else if(this.currentChar=="%"){this.tokens.add(new Token(TokenTypes.PRECENTAGE)); this.advance()}
-            this.advance()
-
+            }
+            else
+            {
+                this.advance()
+            }
         }
         return this.tokens
     }
@@ -69,6 +72,19 @@ class Lexer {
                 dotcount++
                 num+='.'
             }
+            else
+            {
+                num+=this.currentChar
+            }
+            this.advance()
+        }
+        if(dotcount==0)
+        {
+            return new Token(TokenTypes.INT, parseInt(num))
+        }
+        else
+        {
+            return new Token(TokenTypes.FLOAT, parseFloat(num))
         }
     }
 }
