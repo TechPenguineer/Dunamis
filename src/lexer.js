@@ -10,8 +10,18 @@ let lexer = moo.compile
         RPAREN: ")",
 
         // STRINGS
-        string: /"(?:\\["\\]|[^\n"\\])*"/
-        
+        string: /"(?:\\["\\]|[^\n"\\])*"/,
+
+        // KEYWORDS
+        keywords: ['while','if','else'],
+
+        // MISC
         NL: {match: /\n/, lineBreaks: true}
     }
 )
+
+lexer.reset('i have 3 cows')
+
+    let token;
+        while(token==lexer.next())
+            console.log(lexer.next())
