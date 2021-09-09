@@ -15,13 +15,18 @@ An interpreted general-purpose programming language
 - - [**Developer Tools**](#dev-tools)
 - - - [*Parser*](#parser)
 
+
+<hr>
+
+
+
 # Compiler
 
 ## Run
 ```duna compile <PATH_TO_FILE>```
 ## Dev Tools
 
-### Parse
+### Parser
 ```duna arg parse```
 
 
