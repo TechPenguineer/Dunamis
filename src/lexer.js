@@ -1,6 +1,7 @@
 const { type } = require('express/lib/response');
 const {TokenList, Token}=require('./token/token_constructor');
 const {TokenTypes}=require('./token/tokens')
+
 class Lexer {
     /**
      * 
@@ -42,7 +43,11 @@ class Lexer {
             else if(this.currentChar=="/"){this.tokens.add(new Token(TokenTypes.DIVIDE));this.advance()}
             else if(this.currentChar=="^"){this.tokens.add(new Token(TokenTypes.EXPONENT)); this.advance()}
             else if(this.currentChar=="%"){this.tokens.add(new Token(TokenTypes.PRECENTAGE)); this.advance()}
+            this.advance()
+
         }
         return this.tokens
     }
 }
+
+module.exports={Lexer}

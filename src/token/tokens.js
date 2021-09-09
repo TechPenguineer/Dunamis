@@ -4,11 +4,11 @@ const TokenTypes = {
 
     // MATH
     PLUS: 'plus',
-    SUBTRACT: 'sub',
-    MULTIPLY: 'multi',
-    DIVIDE: 'frac',
-    EXPONENT: 'expo',
-    PRECENTAGE: "precent"
+    SUBTRACT: 'minus',
+    MULTIPLY: 'multiply',
+    DIVIDE: 'divide',
+    EXPONENT: 'exponent',
+    PRECENTAGE: "precentage"
 }
 Object.freeze(TokenTypes)
 

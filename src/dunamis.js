@@ -1,5 +1,6 @@
 const fs = require('fs')
 const { InvalidFileError, IlligalCommandError } = require('./error_handler')
+const { Lexer } = require('./lexer')
 
 Compile_arg_index = 2
 Path_compile_arg_index = 3
@@ -17,6 +18,8 @@ function main(args)
         if(fs.existsSync(path))
         {
             var val=fs.readFileSync(path,{encoding:'utf-8'})
+            var lexer = new Lexer(path,val)
+            var val=lexer.start().list()
             console.log(val)
         }
         else
