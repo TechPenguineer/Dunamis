@@ -12,4 +12,9 @@ const TokenTypes = {
 }
 Object.freeze(TokenTypes)
 
-module.exports={TokenTypes}
+const constants = 
+{
+    numbers: "1234567890"
+}
+Object.freeze(constants)
+module.exports={TokenTypes,constants}

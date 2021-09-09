@@ -1,6 +1,6 @@
 const { type } = require('express/lib/response');
 const {TokenList, Token}=require('./token/token_constructor');
-const {TokenTypes}=require('./token/tokens')
+const {TokenTypes, constants}=require('./token/tokens')
 
 class Lexer {
     /**
@@ -37,6 +37,7 @@ class Lexer {
     {
         while(this.currentChar != null)
         {
+            if(constants.numbers.includes(this.currentChar)){this.tokens.add(this.makeNumber())}
             if(this.currentChar=="+"){this.tokens.add(new Token(TokenTypes.PLUS));this.advance()}
             else if(this.currentChar=="-"){this.tokens.add(new Token(TokenTypes.SUBTRACT));this.advance()}
             else if(this.currentChar=="*"){this.tokens.add(new Token(TokenTypes.MULTIPLY));this.advance()}
@@ -47,6 +48,27 @@ class Lexer {
 
         }
         return this.tokens
+    }
+    /**
+     * @returns {Token}
+     */
+    makeNumber()
+    {
+        var num = ''
+        var dotcount=0
+        var digits=constants.numbers
+        digits+="."
+
+        while(this.currentChar != null && digits.includes(this.currentChar))
+        {
+            if(this.currentChar == '.')
+            {
+                if (dotcount==1) return new InvalidSyntaxError(`'${num}' expected float or integer.`).log()
+
+                dotcount++
+                num+='.'
+            }
+        }
     }
 }
 
