@@ -7,3 +7,5 @@ const TokenTypes = {
     DIVIDE: 'frac'
 }
 Object.freeze(TokenTypes)
+
+module.exports={TokenTypes}

@@ -61,3 +61,5 @@ class TokenList
         return this.tokensRaw
     }
 }
+
+module.exports={TokenList,Token}
