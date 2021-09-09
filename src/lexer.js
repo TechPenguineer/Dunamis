@@ -36,11 +36,12 @@ class Lexer {
     {
         while(this.currentChar != null)
         {
-            if(this.currentChar=="+")
-            {
-                this.tokens.add(new Token(TokenTypes.PLUS))
-                this.advance()
-            }
+            if(this.currentChar=="+"){this.tokens.add(new Token(TokenTypes.PLUS));this.advance()}
+            else if(this.currentChar=="-"){this.tokens.add(new Token(TokenTypes.SUBTRACT));this.advance()}
+            else if(this.currentChar=="*"){this.tokens.add(new Token(TokenTypes.MULTIPLY));this.advance()}
+            else if(this.currentChar=="/"){this.tokens.add(new Token(TokenTypes.DIVIDE));this.advance()}
+            else if(this.currentChar=="^"){this.tokens.add(new Token(TokenTypes.EXPONENT)); this.advance()}
+            else if(this.currentChar=="%"){this.tokens.add(new Token(TokenTypes.PRECENTAGE)); this.advance()}
         }
         return this.tokens
     }
