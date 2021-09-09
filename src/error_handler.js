@@ -28,3 +28,5 @@ class InvalidFileError extends DunamisError
         super('Invalid File',details)
     }
 }
+
+module.exports = {InvalidFileError,IlligalCommandError,DunamisError}
