@@ -29,4 +29,12 @@ class InvalidFileError extends DunamisError
     }
 }
 
-module.exports = {InvalidFileError,IlligalCommandError,DunamisError}
+class InvalidSyntaxError extends DunamisError
+{
+    constructor(details)
+    {
+        super('Invalid Syntax',details)
+    }
+}
+
+module.exports = {InvalidFileError,IlligalCommandError,DunamisError,InvalidSyntaxError}

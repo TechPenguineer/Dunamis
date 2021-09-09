@@ -1,6 +1,7 @@
 const { type } = require('express/lib/response');
 const {TokenList, Token}=require('./token/token_constructor');
-const {TokenTypes, constants}=require('./token/tokens')
+const {TokenTypes, constants}=require('./token/tokens');
+const { InvalidSyntaxError } = require('./error_handler');
 
 class Lexer {
     /**
