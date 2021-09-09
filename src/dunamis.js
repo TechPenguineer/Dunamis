@@ -1,6 +1,19 @@
 const { path } = require('express/lib/application')
 const fs = require('fs')
 
+class DunamisError
+{
+    constructor(name, details)
+    {
+        this.name = name,
+        this.details = details
+    }
+
+    log()
+    {
+        var result = `${this.name}: ${this.details}`
+    }
+}
 /**
  * @param {Array} args
  */
@@ -14,6 +27,7 @@ function main(args)
         if(fs.existsSync(name))
         {
             var val=fs.readFileSync(path,{encoding:'utf-8'})
+            console.log(val)
         }
     }
 
