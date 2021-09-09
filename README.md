@@ -12,7 +12,7 @@ fx say_name(str -> name)
 ```
 
 ### Variables
-```
+```js
 // Constant Type
 const x = 11;
 
