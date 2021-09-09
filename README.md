@@ -1,5 +1,30 @@
-# Dunamis
-🎩 An interpreted general-purpose programming language 🔨
+<p align="center">
+  <h1 align="center">Duanmis</h1>
+  <h3 align="center">Version 0.0.0.1 - Alpha Version 1<br>
+An interpreted general-purpose programming language
+</h3>
+</p>
+
+
+# Contents
+- [**Syntax**](#syntax)
+- - [*Functions*](#functions)
+- - [*Variables*](#variables)
+- [**Compiler**](#compiler)
+- - [*Run*](#run)
+- - [**Developer Tools**](#dev-tools)
+- - - [*Parser*](#parser)
+
+# Compiler
+
+## Run
+```duna compile <PATH_TO_FILE>```
+## Dev Tools
+
+### Parse
+```duna arg parse```
+
+
 
 # Syntax
 
