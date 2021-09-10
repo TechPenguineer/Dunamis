@@ -22,8 +22,9 @@ install:
 	sudo cp ./duna.out /usr/local/bin/duna
 
 clean:
-	sudo rm /usr/local/include/duna
-	sudo rm /usr/local/include/duna/.
+	sudo rm -rf /usr/local/include/duna/
+	sudo rm -rf /usr/local/lib/
+	sudo rm -rf /usr/local/bin/duna
 	
 	-rm *.out
 	-rm *.o
