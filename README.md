@@ -35,7 +35,7 @@ An interpreted general-purpose programming language
 
 ### Functions
 ```js
-fx say_name(str -> name)
+fx say_name(str name)
 {
   write("Hello, $(name)!");
 }
@@ -43,15 +43,18 @@ fx say_name(str -> name)
 
 ### Variables
 ```js
-// Constant Type
-const x = 11;
-
-// Numbers
 float x = 1.5;
 int y = 2;
-double = 2315631;
+str z = "Hello";
+```
 
-//
+### Objects
+
+```js
+obj car = {
+    int price = 2000;
+    str colour = "Red";
+}
 ```
 
 ## OwnerShip
