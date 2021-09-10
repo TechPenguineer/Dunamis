@@ -3,4 +3,9 @@ obj car = {
     str colour = "Red";
 }
 
-print("Cars price: ", car.price);
+fx RETURN_CAR_DETAILS(obj -> car_obj, str -> object_property)
+{
+    print("The cars ",object_property,": " car_obj.object_property);
+}
+
+RETURN_CAR_DETAILS(car, "price");
