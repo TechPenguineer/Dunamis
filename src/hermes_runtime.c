@@ -1080,8 +1080,8 @@ AST_T* runtime_visit_binop(runtime_T* runtime, AST_T* node)
                                 break;
                             }
 
-                            AST_T* ast_fdef_arg = (AST_T*) child->function_definition_arguments->items[x];
-                            char* arg_name = ast_fdef_arg->variable_name;
+                           AST_T* ast_fdef_arg = (AST_T*) child->function_definition_arguments->items[x];
+                           char* arg_name = ast_fdef_arg->variable_name;
 
                             AST_T* new_variable_def = init_ast(AST_VARIABLE_DEFINITION);
                             new_variable_def->variable_value = runtime_visit(runtime, ast_arg);

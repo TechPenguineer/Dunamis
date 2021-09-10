@@ -35,11 +35,11 @@ int main(int argc, char* argv[])
     if (argc < 2)
     {
         interactive = 1;
-        printf("---- * Interactive Dunamis Shell * ----\n");
+        printf("\033[0;32m---- * Interactive Dunamis Shell * ----\n");
 
         while (interactive)
         {
-            char* str = hermes_get_stdin(">: ");
+            char* str = hermes_get_stdin("\t\033[0;35m >> ");
 
             lexer = init_hermes_lexer(str);
 
@@ -50,7 +50,7 @@ int main(int argc, char* argv[])
 
         hermes_cleanup(lexer, parser, runtime, node);
 
-        printf("---- * Interactive Shell Terminated. * ----\n");
+        printf("\n\033[0;31m---- * Interactive Shell Terminated. * ----\033[0m\n");
 
         return 0;
     }
