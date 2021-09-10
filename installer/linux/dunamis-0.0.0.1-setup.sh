@@ -13,3 +13,5 @@ cd Dunamis
 
 sudo make clean
 sudo make install
+clear
+duna
