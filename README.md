@@ -53,3 +53,8 @@ double = 2315631;
 
 //
 ```
+
+## OwnerShip
+
+This language is owned by TechPenguineer, who is also formally known as the owner of Zeno Inc.
+We have all right to own this language into our organization.
