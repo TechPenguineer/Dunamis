@@ -1,0 +1,3 @@
+fx parse_args(str -> string_args, int -> int_args, float -> float_args);
+
+### Use arrow pointer to define argument type
