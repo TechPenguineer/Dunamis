@@ -5,6 +5,7 @@
 #include "include/hermes_cleanup.h"
 #include "include/string_utils.h"
 #include "include/io.h"
+#include <string.h>
 #include <signal.h>
 
 
