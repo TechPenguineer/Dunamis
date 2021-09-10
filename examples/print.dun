@@ -1,0 +1,6 @@
+void name(name_str)
+{
+    print("Hello, ", name_str)
+}
+
+name("BOB");
