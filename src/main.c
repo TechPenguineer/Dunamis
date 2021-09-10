@@ -27,15 +27,21 @@ int main(int argc, char* argv[])
     hermes_parser_T* parser = (void*)0;
     AST_T* node = (void*)0;
     
-    if(strcmp(argv[1],"--lang-update")==0)
-    {
-        // CODE TO INSTALLER
-    }
+
     
     if (argc < 2)
     {
         interactive = 1;
-        printf("\033[0;32m---- * Interactive Dunamis Shell * ----\n");
+                printf("\e[1;31m /$$$$$$$                                              /$$          \n");
+                printf("| $$__  $$                                            |__/          \n");
+                printf("| $$  \\ $$ /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$/$$$$  /$$  /$$$$$$$\n");
+                printf("| $$  | $$| $$  | $$| $$__  $$ |____  $$| $$_  $$_  $$| $$ /$$_____/\n");
+                printf("| $$  | $$| $$  | $$| $$  \\ $$  /$$$$$$$| $$ \\ $$ \\ $$| $$|  $$$$$$ \n");
+                printf("| $$  | $$| $$  | $$| $$  | $$ /$$__  $$| $$ | $$ | $$| $$ \\____  $$\n");
+                printf("| $$$$$$$/|  $$$$$$/| $$  | $$|  $$$$$$$| $$ | $$ | $$| $$ /$$$$$$$/\n");
+                printf("|_______/  \\______/ |__/  |__/ \\_______/|__/ |__/ |__/|__/|_______/ \n");
+                printf("\e[1;31m\n===================================================================\n");
+                printf("\n\e[1;36m\t\tVersion 0.0.1     -     Alpha Version 1\n\e[0m");
 
         while (interactive)
         {
@@ -55,12 +61,15 @@ int main(int argc, char* argv[])
         return 0;
     }
 
-    lexer = init_hermes_lexer(hermes_read_file(argv[1]));
-    parser = init_hermes_parser(lexer);
-    node = hermes_parser_parse(parser, (void*) 0);
-    runtime_visit(runtime, node);
+   if(strcmp(argv[1],"run")==0)
+    {
+        lexer = init_hermes_lexer(hermes_read_file(argv[2]));
+        parser = init_hermes_parser(lexer);
+        node = hermes_parser_parse(parser, (void*) 0);
+        runtime_visit(runtime, node);
 
-    hermes_cleanup(lexer, parser, runtime, node);
+        hermes_cleanup(lexer, parser, runtime, node);
 
-    return 0;
+        return 0;
+    }
 }
