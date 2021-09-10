@@ -1,6 +1,5 @@
-void name(name_str)
+fx name(name_str)
 {
     print("Hello, ", name_str)
+    return name_str;
 }
-
-name("BOB");

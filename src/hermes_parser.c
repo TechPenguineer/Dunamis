@@ -82,16 +82,16 @@ static AST_T* as_object_child(AST_T* ast, AST_T* object)
 static unsigned int is_data_type(char* token_value)
 {
     return (
-        strcmp(token_value, "void") == 0 ||
+        strcmp(token_value, "fx") == 0 ||
         strcmp(token_value, "int") == 0 ||
-        strcmp(token_value, "string") == 0 ||
+        strcmp(token_value, "str") == 0 ||
         strcmp(token_value, "char") == 0 ||
         strcmp(token_value, "float") == 0 ||
         strcmp(token_value, "bool") == 0 ||
-        strcmp(token_value, "object") == 0 ||
+        strcmp(token_value, "obj") == 0 ||
         strcmp(token_value, "enum") == 0 ||
         strcmp(token_value, "list") == 0 ||
-        strcmp(token_value, "source") == 0
+        strcmp(token_value, "src") == 0
     );
 }
 
@@ -290,10 +290,10 @@ AST_T* hermes_parser_parse_type(hermes_parser_T* hermes_parser, hermes_scope_T* 
 
     char* token_value = hermes_parser->current_token->value;
 
-    if (strcmp(token_value, "void") == 0)
+    if (strcmp(token_value, "fx") == 0)
         type->type = DATA_TYPE_VOID;
     else
-    if (strcmp(token_value, "string") == 0)
+    if (strcmp(token_value, "str") == 0)
         type-> type = DATA_TYPE_STRING;
     else
     if (strcmp(token_value, "char") == 0)
@@ -308,7 +308,7 @@ AST_T* hermes_parser_parse_type(hermes_parser_T* hermes_parser, hermes_scope_T* 
     if (strcmp(token_value, "boolean") == 0)
         type-> type = DATA_TYPE_BOOLEAN;
     else
-    if (strcmp(token_value, "object") == 0)
+    if (strcmp(token_value, "obj") == 0)
         type-> type = DATA_TYPE_OBJECT;
     else
     if (strcmp(token_value, "enum") == 0)
@@ -317,7 +317,7 @@ AST_T* hermes_parser_parse_type(hermes_parser_T* hermes_parser, hermes_scope_T* 
     if (strcmp(token_value, "list") == 0)
         type-> type = DATA_TYPE_LIST;
     else
-    if (strcmp(token_value, "source") == 0)
+    if (strcmp(token_value, "src") == 0)
         type-> type = DATA_TYPE_SOURCE;
     
     ast_type->type_value = type;
