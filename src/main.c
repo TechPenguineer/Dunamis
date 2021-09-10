@@ -25,7 +25,12 @@ int main(int argc, char* argv[])
     hermes_lexer_T* lexer = (void*)0;
     hermes_parser_T* parser = (void*)0;
     AST_T* node = (void*)0;
-
+    
+    if(strcmp(argv[1],"--lang-update")==0)
+    {
+        // CODE TO INSTALLER
+    }
+    
     if (argc < 2)
     {
         interactive = 1;
