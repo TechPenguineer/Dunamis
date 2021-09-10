@@ -18,7 +18,7 @@ install:
 	make duna.a
 	sudo mkdir -p /usr/local/include/duna
 	sudo cp -r ./src/include/* /usr/local/include/duna/.
-	sudo cp ./duna.a /usr/local/lib/.
+	sudo cp ./duna.a /usr/local/lib/
 	sudo cp ./duna.out /usr/local/bin/duna
 
 clean:

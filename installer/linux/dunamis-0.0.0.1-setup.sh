@@ -6,8 +6,10 @@ sudo apt install build-essential
 
 clear
 cd /usr/local/
-
-git clone https://github.com/TechPenguineer/Dunamis.git
+sudo rm -rf Dunamis
+sudo rm -rf /usr/local/duna
+sudo git clone https://github.com/TechPenguineer/Dunamis.git
 cd Dunamis 
-make clean
-make install
+
+sudo make clean
+sudo make install
