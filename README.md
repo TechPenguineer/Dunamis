@@ -35,7 +35,7 @@ An interpreted general-purpose programming language
 
 ### Functions
 ```js
-fx say_name(str name)
+fx say_name(str -> name)
 {
   write("Hello, $(name)!");
 }
