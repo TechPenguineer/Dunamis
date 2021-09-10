@@ -783,7 +783,7 @@ AST_T* runtime_visit_function_call(runtime_T* runtime, AST_T* node)
     if (global_scope_func_def)
         return global_scope_func_def;
 
-    printf("Error: [Line %d] Undefined method %s\n", node->line_n, "?"/*node->function_call_name*/); exit(1);
+    //printf("Error: [Line %d] Undefined method %s\n", node->line_n, "?"/*node->function_call_name*/); exit(1);
 }
 
 AST_T* runtime_visit_null(runtime_T* runtime, AST_T* node)

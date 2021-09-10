@@ -1,5 +1,8 @@
-fx name(name_str)
+fx add(int one, int two)
 {
-    print("Hello, ", name_str)
-    return name_str;
+    int sum = one+two;
+    print(sum);  
 }
+
+add(1,3);
+
