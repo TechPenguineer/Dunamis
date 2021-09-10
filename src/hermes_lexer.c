@@ -197,23 +197,28 @@ token_T* hermes_lexer_get_next_token(hermes_lexer_T* hermes_lexer)
             continue;
         }
 
-        if (hermes_lexer->current_char == '/')
+        if (hermes_lexer->current_char == '#')
         {
             hermes_lexer_advance(hermes_lexer);
 
-            if (hermes_lexer->current_char == '/')
+            if (hermes_lexer->current_char == '#')
+            {
+                hermes_lexer_advance(hermes_lexer);
+
+            if (hermes_lexer->current_char == '#')
             {
                 hermes_lexer_advance(hermes_lexer);
                 hermes_lexer_skip_inline_comment(hermes_lexer);
                 continue;
             }
-            else
-            if (hermes_lexer->current_char == '*')
-            {
-                hermes_lexer_advance(hermes_lexer);
-                hermes_lexer_skip_block_comment(hermes_lexer);
-                continue;
             }
+           // else
+           // if (hermes_lexer->current_char == '*')
+           // {
+           //     hermes_lexer_advance(hermes_lexer);
+           //     hermes_lexer_skip_block_comment(hermes_lexer);
+           //     continue;
+           // }
             else
             if (hermes_lexer->current_char != '/')
             {
