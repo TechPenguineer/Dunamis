@@ -19,7 +19,7 @@ An interpreted general-purpose programming language
 - - - [*Ternaries*](#ternaries)
 - - - [*This Properties*](#this-properties)
 - - - [*Timers*](#timers)
-- - - [**Lists*](#lists)
+- - - [*Lists*](#lists)
 - - [**Random**](#random)
 - - - - [*Randint*](#randint)
 - - [**File System**](#aaa)
