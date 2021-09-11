@@ -1,0 +1,3 @@
+int aa = 11
+int x = randint(aa,aa)
+write(x)

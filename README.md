@@ -19,7 +19,9 @@ An interpreted general-purpose programming language
 - - - [*Ternaries*](#ternaries)
 - - - [*This Properties*](#this-properties)
 - - - [*Timers*](#timers)
-- - - [*Lists*](#lists)
+- - - [**Lists*](#lists)
+- - - [**Random**](#random)
+- - - - [*Randint*](#randint)
 - - [**File System**](#aaa)
 - - - [*FPuts*](#fputs)
 - [**Compiler**](#compiler)
@@ -155,7 +157,10 @@ obj timer = time()
 write(timer.seconds)
 ```
 
-
+## Random
+### Randit
+``` int number = randint(1,10) ```
+> randint(minimum, maximum)
 
 # Ownership
 
