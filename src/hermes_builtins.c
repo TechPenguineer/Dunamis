@@ -4,6 +4,8 @@
 #include "include/hermes_parser.h"
 #include "include/string_utils.h"
 #include "include/io.h"
+#include <sys/stat.h>
+#include <sys/types.h>
 #include "include/dl.h"
 #include <string.h>
 #include <time.h>
@@ -18,7 +20,7 @@ void init_builtins(runtime_T* runtime)
   runtime_register_global_function(runtime, "lad", hermes_builtin_function_lad);
   runtime_register_global_function(runtime, "write", hermes_builtin_function_print);
   runtime_register_global_function(runtime, "stdoutbuffer", hermes_builtin_function_stdoutbuffer);
-  runtime_register_global_function(runtime, "aprint", hermes_builtin_function_aprint);
+  runtime_register_global_function(runtime, "awrite", hermes_builtin_function_aprint);
   runtime_register_global_function(runtime, "fopen", hermes_builtin_function_fopen);
   runtime_register_global_function(runtime, "fclose", hermes_builtin_function_fclose);
   runtime_register_global_function(runtime, "fputs", hermes_builtin_function_fputs);
@@ -32,6 +34,8 @@ void init_builtins(runtime_T* runtime)
   runtime_register_global_function(runtime, "free", hermes_builtin_function_free);
   runtime_register_global_function(runtime, "visit", hermes_builtin_function_visit);
   runtime_register_global_function(runtime, "strrev", hermes_builtin_function_strrev);
+  runtime_register_global_function(runtime, "toBin", hermes_builtin_function_toBin);
+
 }
 
 /**
@@ -42,6 +46,49 @@ void init_builtins(runtime_T* runtime)
  *
  * @return AST_T*
  */
+AST_T* hermes_builtin_function_toBin(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
+{
+  runtime_expect_args(args, 2, (int[]) {AST_COMPOUND, AST_STRING});
+
+    AST_T* ast_compound = (AST_T*) args->items[0];
+    AST_T* ast_string = (AST_T*) args->items[1];
+
+    char* filename = ast_string->string_value;
+
+    FILE *outfile;
+
+    const char* filename_template = "%s.bin";
+    char* fname = calloc(strlen(filename) + strlen(filename_template) + 1, sizeof(char));
+    sprintf(fname, filename_template, filename);
+
+    outfile = fopen(fname, "w");
+
+    if (outfile == NULL)
+    {
+        fprintf(stderr, "Could not open %s\n", fname);
+        free(fname);
+        exit(1);
+    }
+
+    // write struct to file
+    int r = fwrite (&*ast_compound, sizeof(struct AST_STRUCT), 1, outfile);
+
+    if(r != 0)
+    {
+        // silence
+    }
+    else
+    {
+        printf("Could not write to %s\n", fname);
+    }
+
+    free(fname);
+
+    fclose(outfile);
+
+    return ast_compound;
+}
+
 AST_T* hermes_builtin_function_print(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
 {
     for (int i = 0; i < args->size; i++)
