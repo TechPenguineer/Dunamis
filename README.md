@@ -10,10 +10,22 @@ An interpreted general-purpose programming language
 - [**Syntax**](#syntax)
 - - [*Functions*](#functions)
 - - [*Variables*](#variables)
+- - [*Objects*](#objects)
+- - [*Enums*](#enums)
+- - [*Include*](#include)
+- - [*For Loops*](#for-loops)
+- - [*Lists*](#lists)
+- - [*Notes*](#notes)
+- - [*Ternaries*](#ternaries)
+- - [*This Properties*](#this-properties)
+- - [*Timers*](#timers)
+- - [**File System**](#aaa)
+- - - [*FPuts*](#fputs)
 - [**Compiler**](#compiler)
 - - [*Run*](#run)
 - - [**Developer Tools**](#dev-tools)
 - - - [*Parser*](#parser)
+- [**Ownership**](#ownership)
 
 
 <hr>
@@ -139,7 +151,7 @@ write(timer.seconds)
 
 
 
-## OwnerShip
+# Ownership
 
 This language is owned by TechPenguineer, who is also formally known as the owner of Zeno Inc.
 We have all right to own this language into our organization.
