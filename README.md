@@ -57,6 +57,88 @@ obj car = {
 }
 ```
 
+### Enums
+```enum
+{
+    Data_one,
+    Data_two,
+    Data_three
+} enum_name;
+```
+
+### Include
+```
+src s = include("examples/fileone.dun")
+src v = visit(s)
+```
+
+### For Loops
+```
+for(int i = 0; i < 10; i+=1)
+{
+    write(i);
+}
+```
+
+###  FPuts
+
+```
+obj file = fopen("hello_world.txt", "w+")
+
+fputs("This is a random sentence", file)
+```
+
+### Lists 
+
+```
+fx print_list(list l)
+{
+    fx list_printer(fx e)
+    {
+        write(e);
+    }
+
+    iterate l with list_printer;
+}
+
+print_list(["apple", "pear", "banana"]);
+```
+
+### Notes
+
+``` 
+### This is a note
+```
+
+### Ternaries
+
+```
+int x = 5;
+str name = x > 3 ? "John" : "David";
+write(name);
+```
+
+### This Properties
+```fx something()
+{
+
+    ### Returns amount of arguments required
+    write(this)
+}
+
+something()
+```
+
+### Timers
+
+```
+obj timer = time()
+
+write(timer.seconds)
+```
+
+
+
 ## OwnerShip
 
 This language is owned by TechPenguineer, who is also formally known as the owner of Zeno Inc.
