@@ -20,7 +20,7 @@ An interpreted general-purpose programming language
 - - - [*This Properties*](#this-properties)
 - - - [*Timers*](#timers)
 - - - [**Lists*](#lists)
-- - - [**Random**](#random)
+- - [**Random**](#random)
 - - - - [*Randint*](#randint)
 - - [**File System**](#aaa)
 - - - [*FPuts*](#fputs)
