@@ -1,0 +1,6 @@
+
+int x = 5;
+
+str name = x > 3 ? "John" : "David";
+
+write(name);

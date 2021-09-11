@@ -38,7 +38,7 @@ hermes_parser_T* init_hermes_parser(hermes_lexer_T* hermes_lexer)
  */
 void hermes_parser_type_error(hermes_parser_T* hermes_parser)
 {
-    printf("[Line %d] Invalid type for assigned value\n", hermes_parser->hermes_lexer->line_n);
+    printf("[Line %d] Invalid type for assigned value\n", hermes_parser->hermes_lexer->line_n-1);
     exit(1);
 }
 

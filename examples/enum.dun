@@ -1,0 +1,8 @@
+enum 
+{
+    Fork,
+    Spoon,
+    Knife
+} utensils;
+
+write(utensils)

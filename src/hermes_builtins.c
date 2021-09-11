@@ -16,7 +16,7 @@ void init_builtins(runtime_T* runtime)
   runtime_register_global_function(runtime, "include", hermes_builtin_function_include);
   runtime_register_global_function(runtime, "wad", hermes_builtin_function_wad);
   runtime_register_global_function(runtime, "lad", hermes_builtin_function_lad);
-  runtime_register_global_function(runtime, "print", hermes_builtin_function_print);
+  runtime_register_global_function(runtime, "write", hermes_builtin_function_print);
   runtime_register_global_function(runtime, "stdoutbuffer", hermes_builtin_function_stdoutbuffer);
   runtime_register_global_function(runtime, "aprint", hermes_builtin_function_aprint);
   runtime_register_global_function(runtime, "fopen", hermes_builtin_function_fopen);

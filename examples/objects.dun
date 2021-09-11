@@ -1,16 +1,9 @@
 obj car = {
     int price = 2000;
     str colour = "Red";
+    float weight = 1024.51;
 }
 
-<<<<<<< Updated upstream
-fx RETURN_CAR_DETAILS(obj -> car_obj, str -> object_property)
-{
-    print("The cars ",object_property,": " car_obj.object_property);
-}
-
-RETURN_CAR_DETAILS(car, "price");
-=======
-print("Cars price: ", car.price);
-print("Colour: ", car.colour)
->>>>>>> Stashed changes
+print(car.price)
+print(car.weight)
+print(car.colour)

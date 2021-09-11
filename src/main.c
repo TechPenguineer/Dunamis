@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
         return 0;
     }
 
-   if(strcmp(argv[1],"run")==0)
+   if(strcmp(argv[1],"compile")==0)
     {
         lexer = init_hermes_lexer(hermes_read_file(argv[2]));
         parser = init_hermes_parser(lexer);
