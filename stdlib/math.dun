@@ -1,0 +1,29 @@
+######################################################
+###                                                ###
+###           Addition And Subtraction             ###
+###                                                ###
+######################################################
+
+fx addInt(int term_one, int term_two)
+{
+    int sum = term_one+term_two;
+    return sum
+}
+
+fx addFloat(float term_one, float term_two)
+{
+    int sum = term_one+term_two
+    return sum
+}
+
+fx subInt(int term_one, int term_two)
+{
+    int prod = term_one-term_two;
+    return prod
+}
+
+fx subFloat(float term_one, float term_two)
+{
+    int prod = term_one-term_two
+    return prod
+}
