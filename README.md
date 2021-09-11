@@ -19,6 +19,7 @@ An interpreted general-purpose programming language
 - - - [*Ternaries*](#ternaries)
 - - - [*This Properties*](#this-properties)
 - - - [*Timers*](#timers)
+- - - [*Lists*](#lists)
 - - [**File System**](#aaa)
 - - - [*FPuts*](#fputs)
 - [**Compiler**](#compiler)
@@ -67,6 +68,11 @@ obj car = {
     int price = 2000;
     str colour = "Red";
 }
+```
+
+### Lists
+```
+list fruits = ["apples","bananas","pears"]
 ```
 
 ### Enums
