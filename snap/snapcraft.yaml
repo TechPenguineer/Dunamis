@@ -1,0 +1,14 @@
+name: dunamis # you probably want to 'snapcraft register <name>'
+base: core18 # the base snap is the execution environment for this snap
+version: '0.0.0.1' # just for humans, typically '1.2+git' or '1.3.2'
+summary: Dunamis - The newer, better language # 79 char long summary
+description: |
+  Dunamis is a general purpose langauge made in C
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+parts:
+  my-part:
+    # See 'snapcraft plugins'
+    plugin: nil
