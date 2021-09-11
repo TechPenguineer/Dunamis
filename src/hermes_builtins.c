@@ -36,6 +36,9 @@ void init_builtins(runtime_T* runtime)
   runtime_register_global_function(runtime, "strrev", hermes_builtin_function_strrev);
   runtime_register_global_function(runtime, "toBin", hermes_builtin_function_toBin);
 
+  // RANDOM 
+  runtime_register_global_function(runtime, "randint", hermes_builtin_function_randint);
+
 }
 
 /**
@@ -46,6 +49,30 @@ void init_builtins(runtime_T* runtime)
  *
  * @return AST_T*
  */
+AST_T* hermes_builtin_function_randint(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
+{
+    runtime_expect_args(args, 2, (int[]){ AST_INTEGER, AST_INTEGER });
+
+    AST_T* minrange_int_ = (AST_T*) args->items[0];
+    AST_T* maxrange_int_ = (AST_T*) args->items[1];
+
+    int minrange_int = minrange_int_->int_value;
+    int maxrange_int = maxrange_int_->int_value;
+
+    int num = (rand()%(maxrange_int-minrange_int+1))+minrange_int;
+    
+    if (minrange_int>maxrange_int)
+    {
+        printf("RANDINT: Smaller range can not be larged than the the maximum range\n");
+        exit(1);
+    }
+    else{
+      AST_T* ast = init_ast(AST_INTEGER);
+      ast->int_value = (int) num;
+    
+      return ast;
+    }
+}
 AST_T* hermes_builtin_function_toBin(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
 {
   runtime_expect_args(args, 2, (int[]) {AST_COMPOUND, AST_STRING});
