@@ -39,6 +39,9 @@ void init_builtins(runtime_T* runtime)
   // RANDOM 
   runtime_register_global_function(runtime, "randint", hermes_builtin_function_randint);
 
+  // STRINGS
+  runtime_register_global_function(runtime, "strcmp", hermes_builtin_function_strcmp);
+
 }
 
 /**
@@ -49,6 +52,26 @@ void init_builtins(runtime_T* runtime)
  *
  * @return AST_T*
  */
+AST_T* hermes_builtin_function_strcmp(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
+{
+    runtime_expect_args(args, 2, (int[]){AST_STRING, AST_STRING});
+
+    AST_T* str_one_ = (AST_T*) args->items[0];
+    AST_T* str_two_ = (AST_T*) args->items[1];
+
+    char *str_one = str_one_->string_value;
+    char *str_two = str_two_->string_value;
+
+    int val = strcmp(str_one,str_two);
+
+    AST_T* ast = init_ast(AST_INTEGER);
+    ast->int_value = (int) val;
+    return ast;
+    
+    
+
+
+}
 AST_T* hermes_builtin_function_randint(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
 {
     runtime_expect_args(args, 2, (int[]){ AST_INTEGER, AST_INTEGER });
@@ -69,7 +92,7 @@ AST_T* hermes_builtin_function_randint(runtime_T* runtime, AST_T* self, dynamic_
     else{
       AST_T* ast = init_ast(AST_INTEGER);
       ast->int_value = (int) num;
-    
+
       return ast;
     }
 }

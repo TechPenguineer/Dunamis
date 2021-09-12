@@ -5,6 +5,8 @@
 
 void init_builtins(runtime_T* runtime);
 
+AST_T* hermes_builtin_function_strcmp(runtime_T* runtime, AST_T* self, dynamic_list_T* args);
+
 AST_T* hermes_builtin_function_randint(runtime_T* runtime, AST_T* self, dynamic_list_T* args);
 
 AST_T* hermes_builtin_function_toBin(runtime_T* runtime, AST_T* self, dynamic_list_T* args);

@@ -907,7 +907,7 @@ AST_T* runtime_visit_attribute_access(runtime_T* runtime, AST_T* node)
 
                 if (left->type == AST_LIST)
                 {
-                    int_ast->int_value = left->list_children->size;
+                    int_ast->int_value = left->list_children->size-1;
                 }
                 else
                 if (left->type == AST_STRING)

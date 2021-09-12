@@ -1,0 +1,8 @@
+list fruits = ["apples","bananans"]
+
+int i = fruits.length;
+
+for(int x=0; x>100; x=+1)
+{
+    write(x)
+}
