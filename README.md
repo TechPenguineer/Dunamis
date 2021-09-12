@@ -221,3 +221,6 @@ Combinds *2* strings
 
 This language is owned by TechPenguineer, who is also formally known as the owner of Zeno Inc.
 We have all right to own this language into our organization.
+
+# Sebbekarlsson
+This template was made by sebbekarlsson! All credit goes to him!!
