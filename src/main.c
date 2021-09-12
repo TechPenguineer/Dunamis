@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
                 printf("| $$$$$$$/|  $$$$$$/| $$  | $$|  $$$$$$$| $$ | $$ | $$| $$ /$$$$$$$/\n");
                 printf("|_______/  \\______/ |__/  |__/ \\_______/|__/ |__/ |__/|__/|_______/ \n");
                 printf("\e[1;31m\n===================================================================\n");
-                printf("\n\e[1;36m\t\tVersion 0.0.1     -     Alpha Version 1\n\e[0m");
+                printf("\n\e[1;36m\t\tVersion 0.0.0.1     -     Alpha Version 1\n\e[0m");
 
         while (interactive)
         {
@@ -60,7 +60,10 @@ int main(int argc, char* argv[])
 
         return 0;
     }
-
+   if(strcmp(argv[1],"version")==0 || strcmp(argv[1], "-v")==0)
+   {
+       printf("\n\tDunamis\n==========================\nCurrent version is 0.0.0.1\nAlpha version 1\nPublisher: TechPenguineer\nReleased: 9/10/2021\n");
+   }
    if(strcmp(argv[1],"compile")==0)
     {
         lexer = init_hermes_lexer(hermes_read_file(argv[2]));
