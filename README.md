@@ -135,6 +135,20 @@ obj file = fopen("hello_world.txt", "w+")
 fputs("This is a random sentence", file)
 ```
 
+### FOut
+
+Writes file
+```
+obj file = fopen("file.extention", "permission")
+```
+
+### FClose
+Deletes file
+```
+fclose(file)
+```
+
+
 ### Lists 
 Stores multible variable with any type 
 
