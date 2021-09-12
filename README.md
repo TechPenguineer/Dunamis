@@ -53,7 +53,7 @@ An interpreted general-purpose programming language
 ```duna git```
 
 ## Template
-```duna template```
+```duna template``` -> `Segmentation Fault`
 
 ## Update
 - [x] **Comming Soon**
