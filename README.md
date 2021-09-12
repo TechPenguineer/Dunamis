@@ -24,6 +24,9 @@ An interpreted general-purpose programming language
 - - - - [*Randint*](#randint)
 - - [**File System**](#aaa)
 - - - [*FPuts*](#fputs)
+- - [**String Methods**](#string-methods)
+- - - [*strcmp*](#strcmp)
+- - - [*strcmb*](#strcmb)
 - [**Compiler**](#compiler)
 - - [*Run*](#run)
 - - [**Developer Tools**](#dev-tools)
@@ -49,6 +52,8 @@ An interpreted general-purpose programming language
 # Syntax
 
 ### Functions
+
+LOL Code do stuff from in block
 ```js
 fx say_name(str name)
 {
@@ -57,6 +62,8 @@ fx say_name(str name)
 ```
 
 ### Variables
+
+Um... well... there variables `:/`
 ```js
 float x = 1.5;
 int y = 2;
@@ -64,6 +71,7 @@ str z = "Hello";
 ```
 
 ### Objects
+Stores object and properties
 
 ```js
 obj car = {
@@ -71,13 +79,9 @@ obj car = {
     str colour = "Red";
 }
 ```
-
-### Lists
-```
-list fruits = ["apples","bananas","pears"]
-```
-
 ### Enums
+
+Lets be honest, we rarely use these anyways
 ```enum
 {
     Data_one,
@@ -87,12 +91,17 @@ list fruits = ["apples","bananas","pears"]
 ```
 
 ### Include
+
+Uses other files data
+
 ```
 src s = include("examples/fileone.dun")
 src v = visit(s)
 ```
 
 ### For Loops
+
+Repeats a certain amount of time
 ```
 for(int i = 0; i < 10; i+=1)
 {
@@ -102,6 +111,8 @@ for(int i = 0; i < 10; i+=1)
 
 ###  FPuts
 
+Writes to a file
+
 ```
 obj file = fopen("hello_world.txt", "w+")
 
@@ -109,6 +120,7 @@ fputs("This is a random sentence", file)
 ```
 
 ### Lists 
+Stores multible variable with any type 
 
 ```
 fx print_list(list l)
@@ -125,13 +137,13 @@ print_list(["apple", "pear", "banana"]);
 ```
 
 ### Notes
-
+There are not read by the lexer or parser
 ``` 
 ### This is a note
 ```
 
 ### Ternaries
-
+Compares a value without a `if` `else` statement 
 ```
 int x = 5;
 str name = x > 3 ? "John" : "David";
@@ -139,6 +151,8 @@ write(name);
 ```
 
 ### This Properties
+Writes the properties of the function
+
 ```fx something()
 {
 
@@ -151,6 +165,7 @@ something()
 
 ### Timers
 
+Creates a timer to get current date data
 ```
 obj timer = time()
 
@@ -161,6 +176,16 @@ write(timer.seconds)
 ### Randit
 ``` int number = randint(1,10) ```
 > randint(minimum, maximum)
+
+## String Methods
+### Strcmp
+Compares *2* strings
+```strcmp("Hello", "hello");```
+>>> Returns 0 if compares true
+### Strcmb
+Combinds *2* strings
+```strcmb("Foo ", "bar");```
+
 
 # Ownership
 
