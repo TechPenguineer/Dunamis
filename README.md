@@ -42,6 +42,19 @@ An interpreted general-purpose programming language
 
 ## Run
 ```duna compile <PATH_TO_FILE>```
+
+## Version
+```duna version``` or ```duna -v```
+
+## Git
+```duna git```
+
+## Template
+```duna template```
+
+## Update
+- [x] **Comming Soon**
+
 ## Dev Tools
 
 ### Parser
