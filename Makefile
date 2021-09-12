@@ -1,4 +1,4 @@
-exec = duna.out
+exec = duna.exe
 sources = $(wildcard src/*.c)
 objects = $(sources:.c=.o)
 flags = -g -Wall -lm -ldl -fPIC -rdynamic -std=c99
@@ -20,7 +20,7 @@ install:
 	sudo mkdir -p /usr/local/lib/
 	sudo cp -r ./src/include/* /usr/local/include/duna/.
 	sudo cp ./duna.a /usr/local/lib/
-	sudo cp ./duna.out /usr/local/bin/duna
+	sudo cp ./duna.exe /usr/local/bin/duna
 
 clean:
 	sudo rm -rf /usr/local/include/duna/

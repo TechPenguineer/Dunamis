@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "include/publish.h"
-
+#include "include/parser.h"
 
 
 int checkForManifest()
@@ -10,7 +10,7 @@ int checkForManifest()
 
     printf("\033[1m\033[33m⌛ - Checking for Manifest");
 
-    FILE* f = fopen("package.yaml", "rw");
+    FILE* f = fopen("package.dunapkg", "rw");
 
     if(f)
     {
@@ -26,9 +26,15 @@ int checkForManifest()
     }
 }
 
+int checkFileContents()
+{
+    char *content = GET_CONTENTS("package.dunapkg");
+    printf("%s",content);
+    return 1;
+}
 void prompt()
 {
-    if(checkForManifest()==1)
+    if(checkForManifest()==1&&checkFileContents()==1)
     {
         printf("Go for publishing!\n");
     }

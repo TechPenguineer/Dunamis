@@ -1,4 +1,4 @@
-name="testing"
+name=testing
 version=1.0.0
-description="This is where you put your discription"
-publisher="Your Name Here"
+description=This is where you put your description
+publisher=Your Name Here

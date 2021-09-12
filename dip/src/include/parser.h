@@ -1,0 +1,1 @@
+char* GET_CONTENTS(char *filename);
