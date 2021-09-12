@@ -1,0 +1,2 @@
+int checkForManifest();
+void prompt();

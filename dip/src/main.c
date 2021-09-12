@@ -2,11 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include "include/errors.h"
+#include "include/publish.h"
 
 int main(int argc, char *argv[])
 { 
    
-    
+   if(strcmp(argv[1], "publish")==0)
+   {
+       prompt();
+   }
+
     if(strcmp(argv[1], "install")==0)
     {
         if(!argv[2])
