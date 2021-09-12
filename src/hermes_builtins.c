@@ -41,6 +41,7 @@ void init_builtins(runtime_T* runtime)
 
   // STRINGS
   runtime_register_global_function(runtime, "strcmp", hermes_builtin_function_strcmp);
+  runtime_register_global_function(runtime, "strcmb", hermes_builtin_function_strcmb);
 
 }
 
@@ -52,6 +53,27 @@ void init_builtins(runtime_T* runtime)
  *
  * @return AST_T*
  */
+AST_T* hermes_builtin_function_strcmb(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
+{
+    runtime_expect_args(args, 2, (int[]){AST_STRING, AST_STRING});
+
+    AST_T* str_one_ = (AST_T*) args->items[0];
+    AST_T* str_two_ = (AST_T*) args->items[1];
+
+    char *str_one = str_one_->string_value;
+    char *str_two = str_two_->string_value;
+
+    char *val = strcat(str_one,str_two);
+
+    AST_T* ast = init_ast(AST_STRING);
+    ast->string_value = (char *) val;
+    return ast;
+    
+    
+
+
+}
+
 AST_T* hermes_builtin_function_strcmp(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
 {
     runtime_expect_args(args, 2, (int[]){AST_STRING, AST_STRING});
