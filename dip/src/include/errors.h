@@ -2,5 +2,5 @@
 #include <string.h>
 
 // PREFIXES
-#define WARNING_PREFIX = "Warning: ";
-#define ERROR_PREFIX = "Error: ";
+char *WARNING_PREFIX = "Warning: ";
+char *ERROR_PREFIX = "Error: ";

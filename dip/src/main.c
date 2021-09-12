@@ -5,11 +5,12 @@
 
 int main(int argc, char *argv[])
 { 
+   
     
     if(strcmp(argv[1], "install")==0)
     {
-        if(argc != 2)
-            printf("%s",NO_PACKAGE_PROVIDED);
+        if(!argv[2])
+            printf("\033[1m\033[31m%s\033[0m\x1b[31m\033[31mNo package provided. Couldnt be installed\n\033[0m",ERROR_PREFIX);
         
     }
 }
