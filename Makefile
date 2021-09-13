@@ -1,7 +1,7 @@
 exec = duna.exe
 sources = $(wildcard src/*.c)
 objects = $(sources:.c=.o)
-flags = -g -Wall -lm -ldl -fPIC -rdynamic #-std=c99
+flags = -g -Wall -lm -ldl -fPIC -std=c99 #-rdynamic 
 
 
 $(exec): $(objects)
@@ -13,6 +13,9 @@ duna.a: $(objects)
 %.o: %.c include/%.h
 	gcc -c $(flags) $< -o $@
 
+win:
+	make 
+	
 install:
 	make
 	make duna.a
