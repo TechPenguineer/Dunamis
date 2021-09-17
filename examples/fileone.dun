@@ -1,0 +1,4 @@
+fx print_name()
+{
+    write("Hello")
+}

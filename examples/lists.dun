@@ -1,0 +1,11 @@
+fx print_list(list l)
+{
+    fx list_printer(fx e)
+    {
+        write(e);
+    }
+
+    iterate l with list_printer;
+}
+
+print_list(["apple", "pear", "banana"]);

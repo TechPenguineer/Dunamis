@@ -1,0 +1,3 @@
+obj timer = time()
+
+write(timer.seconds)

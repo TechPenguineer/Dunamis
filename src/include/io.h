@@ -1,6 +1,8 @@
 #ifndef IO_H
 #define IO_H
+#include <stdio.h>
+#include <stdlib.h>
 
-char* get_file_contents(const char* filepath);
 
+char* hermes_read_file(const char* filename);
 #endif

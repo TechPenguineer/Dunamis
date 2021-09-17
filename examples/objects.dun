@@ -1,0 +1,9 @@
+obj car = {
+    int price = 2000;
+    str colour = "Red";
+    float weight = 1024.51;
+}
+
+print(car.price)
+print(car.weight)
+print(car.colour)

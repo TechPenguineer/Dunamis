@@ -1,0 +1,3 @@
+obj file = fopen("hello_world.txt", "w+")
+
+fputs("This is a random sentence", file)

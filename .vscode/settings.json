@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "**/templates/*.html": "html",
+        "hermes_runtime.h": "c"
+    }
+}

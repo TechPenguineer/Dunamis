@@ -1,0 +1,6 @@
+fx @()
+{
+    write("Hello")
+}
+@()
+write("Still Alive")

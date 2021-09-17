@@ -1,0 +1,11 @@
+int random = randint(1,10);
+int guess = input("Guess: ");
+
+    if(guess == random)
+    {
+        write("Incorrect. It was " + random)
+    }
+    else
+    {
+        write("Correct it was " + random);
+    }
