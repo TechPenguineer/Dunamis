@@ -1,2 +1,2 @@
 def x = "E";
-println("My name is, ", x);
+logln("My name is, ", x);

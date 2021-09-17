@@ -1,8 +1,8 @@
 fx dosomething(x, y)
 {
-    print(x);
-    print(y);
-    println("");
+    log(x);
+    log(y);
+    logln("");
 };
 
 dosomething("hello ", "world");
@@ -10,7 +10,7 @@ dosomething("hello ", "world");
 
 fx sayyourname(name)
 {
-    println(name);
+    logln(name);
 };
 
 sayyourname("john doe");
