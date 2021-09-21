@@ -1,0 +1,3 @@
+int x = randint(1,10);
+
+write(x);

@@ -43,6 +43,10 @@ void init_builtins(runtime_T* runtime)
   runtime_register_global_function(runtime, "strcmp", hermes_builtin_function_strcmp);
   runtime_register_global_function(runtime, "strcmb", hermes_builtin_function_strcmb);
 
+  // CLEAR
+  runtime_register_global_function(runtime, "clear", hermes_builtin_function_clrscrean);
+
+
 }
 
 /**
@@ -53,6 +57,12 @@ void init_builtins(runtime_T* runtime)
  *
  * @return AST_T*
  */
+AST_T* hermes_builtin_function_clrscrean(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
+{
+    printf("\e[1;1H\e[2J");
+
+    return 0;
+}
 AST_T* hermes_builtin_function_strcmb(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
 {
     runtime_expect_args(args, 2, (int[]){AST_STRING, AST_STRING});
@@ -94,6 +104,11 @@ AST_T* hermes_builtin_function_strcmp(runtime_T* runtime, AST_T* self, dynamic_l
 
 
 }
+int randint_bif(minrange_int, maxrange_int)
+{
+        int num = (rand()%(maxrange_int-minrange_int+1))+minrange_int;
+        return num;
+}
 AST_T* hermes_builtin_function_randint(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
 {
     runtime_expect_args(args, 2, (int[]){ AST_INTEGER, AST_INTEGER });
@@ -104,7 +119,8 @@ AST_T* hermes_builtin_function_randint(runtime_T* runtime, AST_T* self, dynamic_
     int minrange_int = minrange_int_->int_value;
     int maxrange_int = maxrange_int_->int_value;
 
-    int num = (rand()%(maxrange_int-minrange_int+1))+minrange_int;
+    int num = randint_bif(minrange_int,maxrange_int);
+
     
     if (minrange_int>maxrange_int)
     {

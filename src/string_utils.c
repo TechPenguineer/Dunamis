@@ -8,6 +8,7 @@ char* hermes_char_to_string(char c)
     char* str = calloc(2, sizeof(char));
     str[0] = c;
     str[1] = '\0';  // not really needed because of calloc.
+    
 
     return str;
 }

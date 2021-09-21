@@ -4,6 +4,9 @@
 #include "hermes_runtime.h"
 
 void init_builtins(runtime_T* runtime);
+
+AST_T* hermes_builtin_function_clrscrean(runtime_T* runtime, AST_T* self, dynamic_list_T* args);
+
 AST_T* hermes_builtin_function_strcmb(runtime_T* runtime, AST_T* self, dynamic_list_T* args);
 
 AST_T* hermes_builtin_function_strcmp(runtime_T* runtime, AST_T* self, dynamic_list_T* args);
