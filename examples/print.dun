@@ -2,4 +2,6 @@ str word_one = "Hello"
 str word_two = " World"
 str end_symbol = "!"
 
-write(word_one+word_two+end_symbol)
+cout(word_one+word_two+end_symbol)
+str x = cin()
+cout(x)

@@ -18,13 +18,13 @@ void init_builtins(runtime_T* runtime)
   runtime_register_global_function(runtime, "include", hermes_builtin_function_include);
   runtime_register_global_function(runtime, "wad", hermes_builtin_function_wad);
   runtime_register_global_function(runtime, "lad", hermes_builtin_function_lad);
-  runtime_register_global_function(runtime, "write", hermes_builtin_function_print);
+  runtime_register_global_function(runtime, "cout", hermes_builtin_function_print);
   runtime_register_global_function(runtime, "stdoutbuffer", hermes_builtin_function_stdoutbuffer);
   runtime_register_global_function(runtime, "awrite", hermes_builtin_function_aprint);
   runtime_register_global_function(runtime, "fopen", hermes_builtin_function_fopen);
   runtime_register_global_function(runtime, "fclose", hermes_builtin_function_fclose);
   runtime_register_global_function(runtime, "fputs", hermes_builtin_function_fputs);
-  runtime_register_global_function(runtime, "input", hermes_builtin_function_input);
+  runtime_register_global_function(runtime, "cin", hermes_builtin_function_input);
   runtime_register_global_function(runtime, "char_to_bin", hermes_builtin_function_char_to_bin);
   runtime_register_global_function(runtime, "char_to_oct", hermes_builtin_function_char_to_oct);
   runtime_register_global_function(runtime, "char_to_dec", hermes_builtin_function_char_to_dec);
@@ -42,6 +42,7 @@ void init_builtins(runtime_T* runtime)
   // STRINGS
   runtime_register_global_function(runtime, "strcmp", hermes_builtin_function_strcmp);
   runtime_register_global_function(runtime, "strcmb", hermes_builtin_function_strcmb);
+  runtime_register_global_function(runtime, "lbrk", hermes_builtin_function_lbrk);
 
   // CLEAR
   runtime_register_global_function(runtime, "clear", hermes_builtin_function_clrscrean);
@@ -57,6 +58,11 @@ void init_builtins(runtime_T* runtime)
  *
  * @return AST_T*
  */
+AST_T* hermes_builtin_function_lbrk(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
+{
+    printf("");
+    return 0;
+}
 AST_T* hermes_builtin_function_clrscrean(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
 {
     printf("\e[1;1H\e[2J");

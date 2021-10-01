@@ -1,2 +1,2 @@
 def x = "E";
-logln("My name is, ", x);
+cout("My name is, ", x);
