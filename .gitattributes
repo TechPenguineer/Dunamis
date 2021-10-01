@@ -1,0 +1,8 @@
+
+*.md linguist-detectable=true
+*.md linguist-language=Markdown
+*.md linguist-documentation=false
+
+*.dun linguist-detectable=true
+*.dun linguist-language=Dunamis
+*.dun linguist-documentation=false
