@@ -29,7 +29,8 @@ char* hermes_get_stdin(const char* printstr)
 
     str = malloc(size * sizeof(char));
 
-    printf("\n\e[0;35m>>>\e[0m ");
+  //  printf("\n\e[0;35m>>>\e[0m ");
+    printf("\n>>> ");
 
     for(i = 0; (c = getchar()) != '\n' && c != EOF; ++i)
     {
