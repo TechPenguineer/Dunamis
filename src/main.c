@@ -7,6 +7,7 @@
 #include "include/io.h"
 #include <string.h>
 #include <signal.h>
+#include <stdio.h>
 
 
 volatile unsigned int interactive;
@@ -32,7 +33,17 @@ int main(int argc, char* argv[])
     if (argc < 2)
     {
         interactive = 1;
-                printf("\e[1;31m /$$$$$$$                                              /$$          \n");
+            //    printf("\e[1;31m /$$$$$$$                                              /$$          \n");
+            //    printf("| $$__  $$                                            |__/          \n");
+            //    printf("| $$  \\ $$ /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$/$$$$  /$$  /$$$$$$$\n");
+            //    printf("| $$  | $$| $$  | $$| $$__  $$ |____  $$| $$_  $$_  $$| $$ /$$_____/\n");
+            //    printf("| $$  | $$| $$  | $$| $$  \\ $$  /$$$$$$$| $$ \\ $$ \\ $$| $$|  $$$$$$ \n");
+            //    printf("| $$  | $$| $$  | $$| $$  | $$ /$$__  $$| $$ | $$ | $$| $$ \\____  $$\n");
+            //    printf("| $$$$$$$/|  $$$$$$/| $$  | $$|  $$$$$$$| $$ | $$ | $$| $$ /$$$$$$$/\n");
+            //    printf("|_______/  \\______/ |__/  |__/ \\_______/|__/ |__/ |__/|__/|_______/ \n");
+            //    printf("\e[1;31m\n===================================================================\n");
+            //    printf("\n\e[1;36m\t\tVersion 0.0.0.1     -     Alpha Version 1\n\e[0m");
+                printf(" /$$$$$$$                                              /$$          \n");
                 printf("| $$__  $$                                            |__/          \n");
                 printf("| $$  \\ $$ /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$/$$$$  /$$  /$$$$$$$\n");
                 printf("| $$  | $$| $$  | $$| $$__  $$ |____  $$| $$_  $$_  $$| $$ /$$_____/\n");
@@ -40,12 +51,13 @@ int main(int argc, char* argv[])
                 printf("| $$  | $$| $$  | $$| $$  | $$ /$$__  $$| $$ | $$ | $$| $$ \\____  $$\n");
                 printf("| $$$$$$$/|  $$$$$$/| $$  | $$|  $$$$$$$| $$ | $$ | $$| $$ /$$$$$$$/\n");
                 printf("|_______/  \\______/ |__/  |__/ \\_______/|__/ |__/ |__/|__/|_______/ \n");
-                printf("\e[1;31m\n===================================================================\n");
-                printf("\n\e[1;36m\t\tVersion 0.0.0.1     -     Alpha Version 1\n\e[0m");
-
+                printf("\n===================================================================\n");
+                printf("\n\t\tVersion 0.0.0.1     -     Alpha Version 1");
+                printf("\n\nNote From The Developer: Console highlighting is currently disabled due to windows incompatibility");
         while (interactive)
         {
-            char* str = hermes_get_stdin("\t\033[0;35m >> ");
+           // char* str = hermes_get_stdin("\t\033[0;35m >> ");
+            char* str = hermes_get_stdin("\t >> ");
 
             lexer = init_hermes_lexer(str);
 
@@ -56,7 +68,8 @@ int main(int argc, char* argv[])
 
         hermes_cleanup(lexer, parser, runtime, node);
 
-        printf("\n\033[0;31m---- * Interactive Shell Terminated. * ----\033[0m\n");
+        //printf("\n\033[0;31m---- * Interactive Shell Terminated. * ----\033[0m\n");
+        printf("\n---- * Interactive Shell Terminated. * ----\n");
 
         return 0;
     }
