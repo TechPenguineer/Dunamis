@@ -29,6 +29,8 @@ An interpreted general-purpose programming language
 - - - [*strcmb*](#strcmb)
 - - [**String Transformation**](#string-transformation)
 - - - [**toLowercase**](#toLowercase)
+- - - [**toUppercase**](#toUppercase)
+
 - [**Compiler**](#compiler)
 - - [*Run*](#run)
 - - [*Version*](#version)
@@ -228,6 +230,16 @@ str lowercased = toLowercase(UPPERCASE_SENTENCE)
 cout(lowercased)
 ```
 > Makes each letter in string to lowercase
+
+# toUppercase
+```duna
+str LOWERCASE_SENTENCE = "hello world!"
+
+str uppercased = toUppercase(LOWERCASE_SENTENCE)
+cout(uppercased)
+```
+> Makes each letter in string to uppercase
+
 # Ownership
 
 This language is owned by TechPenguineer, who is also formally known as the owner of Zeno Inc.
