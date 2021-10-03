@@ -227,7 +227,7 @@ str UPPERCASE_SENTENCE = "HELLO WORLD!"
 str lowercased = toLowercase(UPPERCASE_SENTENCE)
 cout(lowercased)
 ```
-> Makes each letter in string to lowecase
+> Makes each letter in string to lowercase
 # Ownership
 
 This language is owned by TechPenguineer, who is also formally known as the owner of Zeno Inc.
