@@ -18,4 +18,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Test compile 
-        run: ./duna.out compile examples/print.dun
+        run: ./duna.out run examples/print.dun
