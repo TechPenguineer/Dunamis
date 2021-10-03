@@ -27,7 +27,8 @@ install:
 	sudo cp ./duna.exe /usr/local/bin/duna
 
 clean-win:
-	rm -rf C:\Program Files (x86)/Dunamis/duna.exe
+	del *.exe
+	
 clean-lin:
 	sudo rm -rf /usr/local/include/duna/
 	sudo rm -rf /usr/local/lib/

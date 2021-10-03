@@ -9,6 +9,9 @@
 #include "include/dl.h"
 #include <string.h>
 #include <time.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 void init_builtins(runtime_T* runtime)
 {
@@ -48,6 +51,9 @@ void init_builtins(runtime_T* runtime)
   runtime_register_global_function(runtime, "clear", hermes_builtin_function_clrscrean);
 
   //runtime_register_global_function(runtime, "split", hermes_builtin_function_split);
+  
+  // STRING TRANSFORM 
+  runtime_register_global_function(runtime, "toLowercase", hermes_builtin_function_tolowercase);
 
 }
 
@@ -60,6 +66,22 @@ void init_builtins(runtime_T* runtime)
  * @return AST_T*
  */
 
+AST_T* hermes_builtin_function_tolowercase(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
+{
+    runtime_expect_args(args, 1, (int[]){AST_STRING});
+
+    AST_T* str_to_lower_ = (AST_T*) args->items[0];
+    char* str_to_lower = str_to_lower_->string_value;
+
+    for(size_t i = 0; i<strlen(str_to_lower); i++)
+    {
+        str_to_lower[i] = tolower(str_to_lower[i]);
+    }
+
+    AST_T* ast = init_ast(AST_STRING);
+    ast->string_value=(char* ) str_to_lower;
+    return ast;
+}
 AST_T* hermes_builtin_function_lbrk(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
 {
     printf("");

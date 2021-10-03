@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
                 printf("| $$$$$$$/|  $$$$$$/| $$  | $$|  $$$$$$$| $$ | $$ | $$| $$ /$$$$$$$/\n");
                 printf("|_______/  \\______/ |__/  |__/ \\_______/|__/ |__/ |__/|__/|_______/ \n");
                 printf("\n===================================================================\n");
-                printf("\n\t\tVersion 0.0.0.1     -     Alpha Version 1");
+                printf("\n\t\tVersion 1.0.0.1     -     Alpha Version 1");
                 printf("\n\nNote From The Developer: Console highlighting is currently disabled due to windows incompatibility\n\n");
         while (interactive)
         {
@@ -80,11 +80,6 @@ int main(int argc, char* argv[])
    {
        printf("\nhttps://github.com/TechPenguineer/Dunamis\n");
    }
-   if (strcmp(argv[1], "update") == 0)
-   {
-       char* current_version[] = "1.0.0.1";
-
-   }
     if (strcmp(argv[1], "template")==0)
    {
        FILE* f = fopen("index.dun", "rw");
@@ -93,7 +88,7 @@ int main(int argc, char* argv[])
    
    if(strcmp(argv[1],"version")==0 || strcmp(argv[1], "-v")==0)
    {
-       printf("\n\tDunamis\n==========================\nCurrent version is 0.0.0.1\nAlpha version 1\nPublisher: TechPenguineer\nReleased: 9/10/2021\n");
+       printf("\n\tDunamis\n==========================\nCurrent version is 1.0.0.1\nAlpha version 1\nPublisher: TechPenguineer\nReleased: 9/10/2021\n");
    }
    if(strcmp(argv[1],"compile")==0)
    {
