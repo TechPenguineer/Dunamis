@@ -15,6 +15,7 @@ duna.a: $(objects)
 
 win:
 	make 
+	cp ./duna.exe C:\Program Files (x86)\Dunamis
 	
 install:
 	make
@@ -25,7 +26,9 @@ install:
 	sudo cp ./duna.a /usr/local/lib/
 	sudo cp ./duna.exe /usr/local/bin/duna
 
-clean:
+clean-win:
+	rm -rf C:\Program Files (x86)/Dunamis/duna.exe
+clean-lin:
 	sudo rm -rf /usr/local/include/duna/
 	sudo rm -rf /usr/local/lib/
 	sudo rm -rf /usr/local/bin/duna/

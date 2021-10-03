@@ -73,7 +73,7 @@ LOL Code do stuff from in block
 ```js
 fx say_name(str name)
 {
-  write("Hello, $(name)!");
+  cout("Hello, $(name)!");
 }
 ```
 

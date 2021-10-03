@@ -47,6 +47,7 @@ void init_builtins(runtime_T* runtime)
   // CLEAR
   runtime_register_global_function(runtime, "clear", hermes_builtin_function_clrscrean);
 
+  //runtime_register_global_function(runtime, "split", hermes_builtin_function_split);
 
 }
 
@@ -58,6 +59,7 @@ void init_builtins(runtime_T* runtime)
  *
  * @return AST_T*
  */
+
 AST_T* hermes_builtin_function_lbrk(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
 {
     printf("");

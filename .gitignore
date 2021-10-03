@@ -74,3 +74,8 @@ tags
 [._]*.un~
 
 # End of https://www.gitignore.io/api/vim,c
+*.sqlite
+*.db
+*.db-shm
+*.db-wal
+*.opendb
