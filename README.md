@@ -46,7 +46,7 @@ An interpreted general-purpose programming language
 # Compiler
 
 ## Run
-```duna compile <PATH_TO_FILE>```
+```duna run <PATH_TO_FILE>```
 
 ## Version
 ```duna version``` or ```duna -v```

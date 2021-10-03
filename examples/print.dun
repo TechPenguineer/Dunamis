@@ -2,3 +2,7 @@ str UPPERCASE_SENTENCE = "HELLO WORLD!"
 
 str lowercased = toLowercase(UPPERCASE_SENTENCE)
 cout(lowercased)
+
+str LOWERCASE_SENTENCE = "hello world!"
+str uppercased = toUppercase(LOWERCASE_SENTENCE)
+cout(uppercased)

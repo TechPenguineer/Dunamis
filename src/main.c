@@ -90,7 +90,7 @@ int main(int argc, char* argv[])
    {
        printf("\n\tDunamis\n==========================\nCurrent version is 1.0.0.1\nAlpha version 1\nPublisher: TechPenguineer\nReleased: 9/10/2021\n");
    }
-   if(strcmp(argv[1],"compile")==0)
+   if(strcmp(argv[1],"run")==0)
    {
         lexer = init_hermes_lexer(hermes_read_file(argv[2]));
         parser = init_hermes_parser(lexer);

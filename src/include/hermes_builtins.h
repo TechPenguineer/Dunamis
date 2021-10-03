@@ -59,5 +59,7 @@ AST_T* hermes_builtin_function_ssh(runtime_T* runtime, AST_T* self, dynamic_list
 
 AST_T* hermes_builtin_function_tolowercase(runtime_T* runtime, AST_T* self, dynamic_list_T* args);
 
+AST_T* hermes_builtin_function_touppercase(runtime_T* runtime, AST_T* self, dynamic_list_T* args);
+
 static AST_T* INITIALIZED_NOOP;
 #endif

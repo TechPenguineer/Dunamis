@@ -54,6 +54,7 @@ void init_builtins(runtime_T* runtime)
   
   // STRING TRANSFORM 
   runtime_register_global_function(runtime, "toLowercase", hermes_builtin_function_tolowercase);
+  runtime_register_global_function(runtime, "toUppercase", hermes_builtin_function_touppercase);
 
 }
 
@@ -65,7 +66,22 @@ void init_builtins(runtime_T* runtime)
  *
  * @return AST_T*
  */
+AST_T* hermes_builtin_function_touppercase(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
+{
+    runtime_expect_args(args, 1, (int[]){AST_STRING});
 
+    AST_T* str_to_lower_ = (AST_T*) args->items[0];
+    char* str_to_lower = str_to_lower_->string_value;
+
+    for(size_t i = 0; i<strlen(str_to_lower); i++)
+    {
+        str_to_lower[i] = toupper(str_to_lower[i]);
+    }
+
+    AST_T* ast = init_ast(AST_STRING);
+    ast->string_value=(char* ) str_to_lower;
+    return ast;
+}
 AST_T* hermes_builtin_function_tolowercase(runtime_T* runtime, AST_T* self, dynamic_list_T* args)
 {
     runtime_expect_args(args, 1, (int[]){AST_STRING});
